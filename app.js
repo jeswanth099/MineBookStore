@@ -1,3 +1,4 @@
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('./models/Index');
@@ -38,6 +39,7 @@ app.get('/edit/:id', async (req, res) => {
     const book = await Book.findByPk(req.params.id);
     res.render('editBook', { book });
 });
+
 
 // Edit book
 app.post('/edit/:id', async (req, res) => {
